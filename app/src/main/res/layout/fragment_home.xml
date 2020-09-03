@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".ui.baseactivity.BaseActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f0f0"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingEnd="@dimen/_14sdp">
+
+        <!--        Header Image Slider-->
+        <TextView
+            android:id="@+id/news_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="sans-serif"
+            android:text="@string/news"
+            android:textColor="@color/darkGreyColor"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/news_label"
+            app:layout_constraintTop_toBottomOf="@id/news_label"
+            tools:listitem="@layout/header_item_design" />
+
+        <!--        Payment History-->
+        <TextView
+            android:id="@+id/payment_history_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="sans-serif"
+            android:text="@string/payment_history"
+            android:textColor="@color/darkGreyColor"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@id/news_label"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            app:layout_constraintBottom_toBottomOf="@id/payment_history_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/payment_history_label"
+            tools:ignore="ContentDescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_of_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/news_label"
+            app:layout_constraintTop_toBottomOf="@id/payment_history_label"
+            tools:listitem="@layout/payment_item_design" />
+
+        <!--        Government Services-->
+        <TextView
+            android:id="@+id/government_services_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="sans-serif"
+            android:text="@string/government_services"
+            android:textColor="@color/darkGreyColor"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@id/news_label"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_of_payment" />
+
+        <ImageView
+            android:id="@+id/service_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            app:layout_constraintBottom_toBottomOf="@id/government_services_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/government_services_label"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/background_view_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/round_background_all_corners"
+            app:layout_constraintBottom_toBottomOf="@id/block_1"
+            app:layout_constraintEnd_toEndOf="@id/block_1"
+            app:layout_constraintStart_toStartOf="@id/government_services_label"
+            app:layout_constraintTop_toBottomOf="@id/government_services_label" />
+
+        <LinearLayout
+            android:id="@+id/block_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/government_services_label"
+            app:layout_constraintTop_toBottomOf="@id/government_services_label">
+
+            <include
+                android:id="@+id/govt_services_1"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/govt_services_2"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/govt_services_3"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/govt_services_4"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!--        Other Services-->
+        <TextView
+            android:id="@+id/other_services_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="sans-serif"
+            android:text="@string/other_services"
+            android:textColor="@color/darkGreyColor"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@id/news_label"
+            app:layout_constraintTop_toBottomOf="@id/block_1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            app:layout_constraintBottom_toBottomOf="@id/other_services_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/other_services_label"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/background_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/round_background_all_corners"
+            app:layout_constraintBottom_toBottomOf="@id/block_2"
+            app:layout_constraintEnd_toEndOf="@id/block_2"
+            app:layout_constraintStart_toStartOf="@id/other_services_label"
+            app:layout_constraintTop_toBottomOf="@id/other_services_label" />
+
+        <LinearLayout
+            android:id="@+id/block_2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/other_services_label"
+            app:layout_constraintTop_toBottomOf="@id/other_services_label">
+
+            <include
+                android:id="@+id/other_services_1"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/other_services_2"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/other_services_3"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/other_services_4"
+                layout="@layout/service_model_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

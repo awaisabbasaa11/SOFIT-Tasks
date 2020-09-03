@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:text="@string/home_services"
+    android:textAlignment="center"
+    android:textSize="@dimen/_10ssp"
+    app:drawableTopCompat="@drawable/ic_1" />

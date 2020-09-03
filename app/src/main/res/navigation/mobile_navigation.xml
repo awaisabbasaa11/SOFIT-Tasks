@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.wasisoft.sofittesttask.ui.baseactivity.fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="com.wasisoft.sofittesttask.ui.baseactivity.fragments.services.ServicesFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_services" />
+
+    <fragment
+        android:id="@+id/nav_posts"
+        android:name="com.wasisoft.sofittesttask.ui.baseactivity.fragments.posts.PostsFragment"
+        android:label="@string/posts"
+        tools:layout="@layout/fragment_posts" />
+</navigation>

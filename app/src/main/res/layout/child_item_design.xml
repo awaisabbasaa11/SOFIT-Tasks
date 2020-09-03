@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_70sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="@dimen/_8sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_view_icon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:scaleType="center"
+        android:cropToPadding="true"
+        android:src="@drawable/ic_1"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minLines="2"
+        android:maxLines="2"
+        android:layout_marginTop="-4dp"
+        android:ellipsize="end"
+        android:text="@string/working_with_government"
+        android:textAlignment="center"
+        android:textSize="@dimen/_10ssp" />
+
+</LinearLayout>
